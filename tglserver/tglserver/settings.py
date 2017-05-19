@@ -33,12 +33,19 @@ ALLOWED_HOSTS = [u'dronekarta.pythonanywhere.com', u'localhost:8000', u'127.0.0.
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+    'rest_framework_xml',
+
+    'djng',
+
 ]
 
 MIDDLEWARE = [
@@ -118,12 +125,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = u'/home/dronekarta/tglserver/media'
-MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/dronekarta/tglserver/static'
-STATIC_URL = '/static/'
+if platform.node() == 'todor-ThinkPad-X230':
+    MEDIA_ROOT = u'/dkt/tgdj_apps/media'
+    MEDIA_ROOT = '/media/'
+    STATIC_ROOT = u'/dkt/tgdj_apps/static'
+    STATIC_URL = '/static/'
+else:
+    MEDIA_ROOT = u'/home/dronekarta/tglserver/media'
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = u'/home/dronekarta/tglserver/static'
+    STATIC_URL = '/static/'
