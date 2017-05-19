@@ -23,6 +23,19 @@ router = routers.DefaultRouter()
 #router.register(r'groups', views.GroupViewSet)
 #router.register(r'myriad_image_request', views.MyriadImageRequestViewSet)
 
+from django.http import HttpResponse
+from django.template import loader
+
+from . import settings
+
+def index(request):
+    template = loader.get_template('index.html')
+    response = {
+        'static_root': settings.STATIC_ROOT,
+        'static_url': settings.STATIC_URL,
+        'platform': settings.platf,
+    }
+    return HttpResponse(template.render(response, request))
 
 
 urlpatterns = [
@@ -32,5 +45,6 @@ urlpatterns = [
     #url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
 #    url(r'^apidocs$', schema_view),
     url(r'^rest/', include(router.urls)),
-    url(r'^', include('tlsites.urls')),
+    #url(r'^', include('tlsites.urls')),
+    url(r'^', index, name='index'),
 ]

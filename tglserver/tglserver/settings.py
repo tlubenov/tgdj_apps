@@ -74,7 +74,7 @@ ROOT_URLCONF = 'tglserver.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -140,6 +140,7 @@ USE_TZ = True
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
+platf = platform.node()
 if platform.node() == 'todor-ThinkPad-X230':
 #    MEDIA_ROOT = u'/dkt/tgdj_apps/media'
 #    MEDIA_ROOT = '/media/'

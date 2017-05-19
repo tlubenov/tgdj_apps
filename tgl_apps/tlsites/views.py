@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from django.http import HttpResponse
 
+
+
 # libraries imports
 from rest_framework import viewsets, mixins, status
 from rest_framework.response import Response
@@ -26,4 +28,4 @@ from rest_framework.decorators import api_view
 
 
 def index(request):
-    return HttpResponse('hello')
+    return HttpResponse('index')
