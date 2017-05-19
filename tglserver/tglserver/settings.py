@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-import os
+import os, platform
+
+print (platform.node())
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +27,7 @@ SECRET_KEY = '6+vhp&sl*tveukt-lixccx3e5=r55&wyx_x!oy8txb*oy*3r)g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'dronekarta.pythonanywhere.com']
+ALLOWED_HOSTS = [u'dronekarta.pythonanywhere.com', u'localhost:8000', u'127.0.0.1', u'localhost']
 
 
 # Application definition
