@@ -146,7 +146,7 @@ if platform.node() == 'todor-ThinkPad-X230':
     STATIC_ROOT = u'/dkt/tgdj_apps/static'
     STATIC_URL = '/static/'
 else:
-    MEDIA_ROOT = u'/home/dronekarta/tglserver/media'
+    MEDIA_ROOT = u'/home/dronekarta/tgdj_apps/media'
     MEDIA_URL = '/media/'
-    STATIC_ROOT = u'/home/dronekarta/tglserver/static'
+    STATIC_ROOT = u'/home/dronekarta/tgdj_apps/static'
     STATIC_URL = '/static/'
