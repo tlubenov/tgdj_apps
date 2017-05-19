@@ -7,6 +7,16 @@ last edit: 2017 05 19
 
 ``` 
 
+
+## Good for learning
+
+https://help.github.com/articles/fetching-a-remote/
+
+http://stackoverflow.com/questions/9510474/removing-pips-cache
+
+
+
+
 # For comment 
 
 https://opensource.com/business/15/12/5-favorite-open-source-django-packages
