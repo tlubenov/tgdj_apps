@@ -25,7 +25,7 @@ SECRET_KEY = '6+vhp&sl*tveukt-lixccx3e5=r55&wyx_x!oy8txb*oy*3r)g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [u'dronekarta.pythonanywhere.com']
 
 
 # Application definition
@@ -117,4 +117,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATIC_URL = '/static/'
+
+# default static files settings for PythonAnywhere.
+# see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
+MEDIA_ROOT = u'/home/dronekarta/tglserver/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = u'/home/dronekarta/tglserver/static'
 STATIC_URL = '/static/'
