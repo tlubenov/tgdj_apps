@@ -18,7 +18,6 @@ from rest_framework import routers
 
 from django.contrib import admin
 
-
 router = routers.DefaultRouter()
 #router.register(r'users', views.UserViewSet)
 #router.register(r'groups', views.GroupViewSet)
@@ -32,5 +31,6 @@ urlpatterns = [
 #    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     #url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
 #    url(r'^apidocs$', schema_view),
-    url(r'^', include(router.urls)),
+    url(r'^rest/', include(router.urls)),
+    url(r'^', include('tlsites.urls')),
 ]

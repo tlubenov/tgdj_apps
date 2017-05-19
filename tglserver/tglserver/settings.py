@@ -9,8 +9,18 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
+import os,sys,platform
+osgis, osrel, osver = platform.system(), platform.release(), platform.version()
 
-import os, platform
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SITE_PATH = os.path.abspath(os.path.dirname(__file__))
+PROJ_PATH = os.path.normpath(os.path.join(SITE_PATH, '..', '..'))
+APPS_PATH = os.path.join(PROJ_PATH, 'tgl_apps')
+if APPS_PATH not in sys.path:
+    sys.path.insert(0, APPS_PATH)
+
+
 
 print ('DroneKarta system runs at: %s' % platform.node())
 
@@ -46,6 +56,7 @@ INSTALLED_APPS = [
 
     'djng',
 
+    'tlsites',
 ]
 
 MIDDLEWARE = [
