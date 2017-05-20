@@ -34,6 +34,7 @@ def index(request):
         'static_root': settings.STATIC_ROOT,
         'static_url': settings.STATIC_URL,
         'platform': settings.platf,
+        'STATICFILES_DIRS': settings.STATICFILES_DIRS,
     }
     return HttpResponse(template.render(response, request))
 

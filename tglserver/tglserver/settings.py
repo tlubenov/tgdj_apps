@@ -25,7 +25,7 @@ if APPS_PATH not in sys.path:
 print ('DroneKarta system runs at: %s' % platform.node())
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -136,7 +136,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
@@ -151,3 +151,6 @@ else:
     MEDIA_URL = '/media/'
     STATIC_ROOT = u'/home/dronekarta/tgdj_apps/static'
     STATIC_URL = '/static/'
+    STATICFILES_DIRS = (
+        os.path.join(PROJ_PATH, 'static'),
+    )
