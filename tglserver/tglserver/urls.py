@@ -46,5 +46,5 @@ urlpatterns = [
 #    url(r'^apidocs$', schema_view),
     url(r'^rest/', include(router.urls)),
     #url(r'^', include('tlsites.urls')),
-    url(r'^', index, name='index'),
+    url(r'^$', index, name='index'),
 ]
