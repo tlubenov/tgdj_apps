@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+
+from django.conf import settings
 from django.conf.urls import url, include
 from rest_framework import routers
 
@@ -30,8 +32,13 @@ from . import settings
 
 def index(request):
     template = loader.get_template('index.html')
+    try:
+        settings.STATIC_ROOT
+        djstr = settings.STATIC_ROOT
+    except Exception as ex:
+        djstr = ex
     response = {
-        'static_root': settings.STATIC_ROOT,
+        'static_root': djstr,
         'static_url': settings.STATIC_URL,
         'platform': settings.platf,
         'STATICFILES_DIRS': settings.STATICFILES_DIRS,
@@ -49,3 +56,9 @@ urlpatterns = [
     #url(r'^', include('tlsites.urls')),
     url(r'^$', index, name='index'),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

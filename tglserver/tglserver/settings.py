@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'djng',
 
     'tlsites',
+
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +69,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'tglserver.urls'
@@ -120,6 +124,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+INTERNAL_IPS = ['127.0.0.1']
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -142,14 +148,17 @@ STATIC_URL = '/static/'
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 platf = platform.node()
 if platform.node() == 'todor-ThinkPad-X230':
-#    MEDIA_ROOT = u'/dkt/tgdj_apps/media'
-#    MEDIA_ROOT = '/media/'
-    STATIC_ROOT = u'/dkt/tgdj_apps/static'
+    MEDIA_ROOT = u'/dkt/tgdj_apps/media'
+    MEDIA_ROOT = '/media/'
+#    STATIC_ROOT = u'/dkt/tgdj_apps/static'
     STATIC_URL = '/static/'
+    STATICFILES_DIRS = (
+        os.path.join(PROJ_PATH, 'static'),
+    )
 else:
     MEDIA_ROOT = u'/home/dronekarta/tgdj_apps/media'
     MEDIA_URL = '/media/'
-    STATIC_ROOT = u'/home/dronekarta/tgdj_apps/static'
+#    STATIC_ROOT = u'/home/dronekarta/tgdj_apps/static'
     STATIC_URL = '/static/'
     STATICFILES_DIRS = (
         os.path.join(PROJ_PATH, 'static'),
