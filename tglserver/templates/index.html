@@ -1,4 +1,25 @@
-{% extends 'base.html' %}
+{% extends 'navbar.html' %}
+
+{% block page_header %}
+    <meta charset="UTF-8">
+    <title>{{ page_title }}</title>
+{% endblock %}
+
+{% block custom_navigation %}
+<div>home</div>
+<div>users</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div>links</div>
+<div>news</div>
+<div>sign up</div>
+<div>login</div>
+<div>help</div>
+{% endblock %}
+
+
 {% block admin %}
 <div>{{ static_root }}</div>
 <div>{{ static_url }}</div>

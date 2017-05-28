@@ -7,12 +7,56 @@ last edit: 2017 05 19
 
 ``` 
 
+```python
+
+http://angular-ui.github.io/ui-leaflet/
+
+https://github.com/angular-ui/ui-leaflet-draw
+
+http://angular-ui.github.io/ui-leaflet-draw/
+
+https://github.com/angular-ui/ui-leaflet
+
+http://tombatossals.github.io/angular-leaflet-directive
+
+
+
+```
+
+## CookieCutter
+
+https://wagtail.chrisdev.com/
+
+http://cookiecutter-django.readthedocs.io/en/latest/deployment-on-pythonanywhere.html
+
+https://cookiecutter-django.readthedocs.io/en/latest/
+
+https://github.com/chrisdev/wagtail-cookiecutter-foundation
+
+http://www.thegeekstuff.com/2010/06/chmod-command-examples/
+
+
+
+
+
+
+# SSH Access
+
+https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu
+
+
+
+
+
+
 
 ## Good for learning
 
 https://help.github.com/articles/fetching-a-remote/
 
 http://stackoverflow.com/questions/9510474/removing-pips-cache
+
+https://tutorial.djangogirls.org/en/template_extending/
 
 
 

@@ -31,13 +31,14 @@ from django.template import loader
 from . import settings
 
 def index(request):
-    template = loader.get_template('index.html')
+    template = loader.get_template('bethany/base.html')
     try:
         settings.STATIC_ROOT
         djstr = settings.STATIC_ROOT
     except Exception as ex:
         djstr = ex
     response = {
+        'page_title': 'Index page',
         'static_root': djstr,
         'static_url': settings.STATIC_URL,
         'platform': settings.platf,
