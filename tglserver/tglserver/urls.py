@@ -31,7 +31,9 @@ from django.template import loader
 from . import settings
 
 def index(request):
-    template = loader.get_template('bethany/base.html')
+#    template = loader.get_template('bethany/base.html')
+    template = loader.get_template('ComingSoon/index.html')
+
     try:
         settings.STATIC_ROOT
         djstr = settings.STATIC_ROOT
